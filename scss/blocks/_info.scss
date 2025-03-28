@@ -1,0 +1,21 @@
+.info {
+
+    &__container {
+        background-image: url(../../images/fon.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: grid;
+        place-items: center;
+    }
+
+    &__frame {
+        width: 100%;
+        max-width: 570px;
+        padding: 50px;
+        background-color: #fff;
+        box-shadow: 0px 0px 30px 0px #2B2A2814;
+        opacity: 0.9;
+        border-radius: 8px;
+    }
+}
