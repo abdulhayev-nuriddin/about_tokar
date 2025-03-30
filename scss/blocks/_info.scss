@@ -5,9 +5,9 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+        background-size: 100% auto;
         display: grid;
         place-items: center;
-        height: auto;
     }
 
     &__frame {
@@ -60,8 +60,64 @@
             transform: scale(0.9);
         }
     }
+
+    &__img {
+        width: 420px;
+    }
+
+    &__tirnoq {
+        width: 55px;
+    }
 }
 
 hr {
     color: #CB8734 !important;
+}
+
+@media only screen and (max-width: 480px) {
+    .info {
+
+        &__container {
+            background-image: none;
+            margin-top: 30px;
+        }
+
+        &__img {
+            // width: 202px;
+            height: 247px;
+            background-image: url(../../images/fon.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-size: 100% auto;
+        }
+
+        &__tirnoq {
+            display: none;
+        }
+
+        &__frame {
+            width: 100%;
+            max-width: 100%;
+            padding: 22px;
+            box-shadow: 0px 0px 30px 0px #2B2A2814;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &__contents {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &__btns {
+            flex-direction: column;
+        }
+    }
 }

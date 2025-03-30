@@ -17,4 +17,22 @@
         letter-spacing: 0%;
         color: #2B2A28;
     }
+
+    &__btn {
+        color: #CB8734;
+    }
+}
+
+@media (max-width: 768px) {
+    // .hero {}
+}
+
+@media (max-width: 480px) {
+    .hero {
+
+        &__content {
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+    }
 }

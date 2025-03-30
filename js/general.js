@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document.querySelector(".loader-container").classList.add("hidden");
-  }, 1);
+  }, 2000);
   //! TODO:  loader sekundni 2000 qilish
   //! Dark Theme Section
   const themeToggle = document.getElementById("themeToggle");

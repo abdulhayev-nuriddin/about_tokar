@@ -1,5 +1,5 @@
 .adv {
-    margin-top: 292px;
+    margin-top: 192px;
 
     &__container {
         width: 100%;
@@ -13,5 +13,26 @@
     &__text {
         width: 250px;
         padding-top: 21px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .adv {
+        &__container {
+            height: auto;
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__contents {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__text {
+            line-height: 30px;
+        }
     }
 }

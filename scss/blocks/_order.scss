@@ -47,3 +47,34 @@
         font-weight: 600;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .order {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            max-width: 100%;
+            width: 100%;
+            padding: 10px !important;
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__inp,
+        &__btn {
+            margin-bottom: 10px;
+            width: 260px;
+        }
+    }
+}

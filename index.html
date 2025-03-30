@@ -11,9 +11,11 @@
 </head>
 
 <body>
-    <!--! TODO: <div class="loader-container">
+
+    <div class="loader-container">
         <div class="loader"></div>
-    </div> -->
+    </div>
+
     <!--!FIXME: <button id="themeToggle">
         <img src="./images/moon.png" alt="Theme Icon" id="themeIcon">
     </button> -->
@@ -28,7 +30,7 @@
                     <h1 class="hero__title">
                         О компании
                     </h1>
-                    <button class="hero__btn d-flex gap-1 align-items-center">
+                    <button onclick="window.location.href = '#';" class="hero__btn d-flex gap-1 align-items-center">
                         <span style="border: 1px solid #CB8734; border-radius: 50%; display: grid; place-items: center;
                             color: #CB8734; width: 30px; height: 30px;">&lt;</span>
                         Вернуться назад
@@ -56,9 +58,9 @@
         </section>
         <section class="info">
             <div class="container info__container">
-                <img src="./images/foto.png" alt="" class="">
+                <img src="./images/foto.png" alt="" class="info__img">
                 <div class="info__frame d-flex align-items-center gap-5">
-                    <img src="./images/tirnoq.png" alt="" class="">
+                    <img src="./images/tirnoq.png" alt="" class="info__tirnoq">
                     <div class="info__texts">
                         <h4 class="info__subtitle">
                             Точилов Александр Николаевич
@@ -104,11 +106,11 @@
                             Стоимость доставки ниже рыночной </p>
                     </div>
                 </div>
-                <div class="d-flex gap-5 align-items-center justify-content-center mt-5 pt-5">
+                <div class="info__btns d-flex gap-5 align-items-center justify-content-center mt-5 pt-5">
                     <button onclick="window.location.href = '#';" class="info__btn ">
                         Перейти в каталог домов
                     </button>
-                    <button class="hero__btn d-flex gap-1 align-items-center">
+                    <button onclick="window.location.href = '#';" class="hero__btn d-flex gap-1 align-items-center">
                         <span
                             style="border: 1px solid #CB8734; border-radius: 50%; display: grid; place-items: center;color: #CB8734; width: 30px; height: 30px;">&lt;</span>
                         Вернуться назад
@@ -159,11 +161,11 @@
         </section>
         <section class="order p-5">
             <div class="container order__container">
-                <div class="d-grid gap-4">
+                <div class="d-grid gap-4 order__contents">
                     <h2 class="order__title">
                         Закажите консультацию, если сомневаетесь
                     </h2>
-                    <form action="https://echo.htmlacademy.ru/" method="post" class="d-flex gap-3">
+                    <form action="https://echo.htmlacademy.ru/" method="post" class="d-flex gap-3 order__form">
                         <input list="flags" type="tel" name="tel number" class="order__inp" id=""
                             placeholder="+38 XXX XXX XX XX" required>
                         <button type="submit" class="order__btn">Заказать</button>
@@ -183,35 +185,32 @@
         </section>
         <section class="carousel">
             <div id="carouselExample" class="carousel slide container" data-bs-ride="carousel">
-                <h1 class="carousel__title">
-                    Фотографии производства
-                </h1>
+                <h1 class="carousel__title">Фотографии производства</h1>
                 <div class="carousel-inner mt-5">
                     <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4"><img src="./images/slide1.png" class="d-block w-100"></div>
-
-                            <div class="col-md-4"><img src="./images/slide2.png" class="d-block w-100"></div>
-
-                            <div class="col-md-4"><img src="./images/slide3.png" class="d-block w-100"></div>
+                        <div class="row text-center">
+                            <div class="col-12 col-md-4">
+                                <img src="./images/slide1.png" class="d-block w-100">
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/slide2.png" class="d-block w-100">
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/slide3.png" class="d-block w-100">
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4"><img src="./images/slide1.png" class="d-block w-100"></div>
-
-                            <div class="col-md-4"><img src="./images/slide2.png" class="d-block w-100"></div>
-
-                            <div class="col-md-4"><img src="./images/slide3.png" class="d-block w-100"></div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4"><img src="./images/slide1.png" class="d-block w-100"></div>
-
-                            <div class="col-md-4"><img src="./images/slide2.png" class="d-block w-100"></div>
-
-                            <div class="col-md-4"><img src="./images/slide3.png" class="d-block w-100"></div>
+                        <div class="row text-center">
+                            <div class="col-12 col-md-4">
+                                <img src="./images/slide1.png" class="d-block w-100">
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/slide2.png" class="d-block w-100">
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/slide3.png" class="d-block w-100">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -225,45 +224,73 @@
                 </button>
             </div>
         </section>
-        <article class="article">
-            <div class="container article__container">
-                <h1 class="article__title mt-5">
-                    Последние статьи
-                </h1>
-                <div class="d-flex justify-content-between mt-5">
-                    <div class="art">
-                        <img src="./images/art1.png" alt="" class="art__img">
-                        <h4 class="art__subtitle mt-4">
-                            Готовый загородный дом или самостоятельное строительство?
-                        </h4>
-                        <p class="art__text mt-4">
-                            Купить или построить дом с нуля – неизбежный вопрос, когда возникает желание приобрести
-                            частную недвижимость за городом. </p>
+        <section class="slider">
+            <div id="articleCarousel" class="carousel slide container" data-bs-ride="carousel">
+                <h1 class="article__title mt-5">Последние статьи</h1>
+                <div class="carousel-inner mt-5">
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col-12 col-md-4">
+                                <img src="./images/art1.png" alt="" class="art__img">
+                                <h4 class="art__subtitle mt-4">Готовый загородный дом или самостоятельное строительство?
+                                </h4>
+                                <p class="art__text mt-4">Купить или построить дом с нуля – неизбежный вопрос, когда
+                                    возникает
+                                    желание приобрести частную недвижимость за городом.</p>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/art2.png" alt="" class="art__img">
+                                <h4 class="art__subtitle mt-4">Авторские проекты домов – почему эксклюзив выгоднее</h4>
+                                <p class="art__text mt-4">Владельцу предстоит решить вопрос: купить готовый типовой
+                                    вариант или
+                                    заказать индивидуальный.</p>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/art3.png" alt="" class="art__img">
+                                <h4 class="art__subtitle mt-4">Красивые дома: 100+ фото лучших проектов</h4>
+                                <p class="art__text mt-4">Современная малоэтажная застройка в России представлена как
+                                    типовыми
+                                    архитектурными решениями, популярными.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="art">
-                        <img src="./images/art2.png" alt="" class="art__img">
-                        <h4 class="art__subtitle mt-4">
-                            Авторские проекты домов – почему эксклюзив выгоднее
-                        </h4>
-                        <p class="art__text mt-4">
-                            Владельцу предстоит решить вопрос: купить готовый типовой вариант или заказать
-                            индивидуальный.
-                        </p>
-                    </div>
-                    <div class="art">
-                        <img src="./images/art3.png" alt="" class="art__img">
-                        <h4 class="art__subtitle mt-4">
-                            Красивые дома: 100+ фото лучших проектов
-                        </h4>
-                        <p class="art__text mt-4">
-                            Современная малоэтажная застройка в России представлена как типовыми архитектурными
-                            решениями, популярными.
-                        </p>
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col-12 col-md-4">
+                                <img src="./images/art1.png" alt="" class="art__img">
+                                <h4 class="art__subtitle mt-4">Современные технологии в строительстве</h4>
+                                <p class="art__text mt-4">Новейшие технологии и материалы позволяют значительно ускорить
+                                    строительство и улучшить его качество.</p>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/art2.png" alt="" class="art__img">
+                                <h4 class="art__subtitle mt-4">Энергоэффективные дома – будущее строительства</h4>
+                                <p class="art__text mt-4">Энергоэффективные дома помогают значительно сократить затраты
+                                    на
+                                    отопление и охлаждение.</p>
+                            </div>
+                            <div class="col-md-4 d-none d-md-block">
+                                <img src="./images/art3.png" alt="" class="art__img">
+                                <h4 class="art__subtitle mt-4">Дома из экологически чистых материалов</h4>
+                                <p class="art__text mt-4">Выбор материалов играет ключевую роль в создании комфортного и
+                                    безопасного жилища.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
-        </article>
+        </section>
+
     </main>
+
     <script src="./js/general.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

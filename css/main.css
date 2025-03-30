@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+
 :root {
   --black-color: #121212;
   --white-color: #FAFAFA;
@@ -79,12 +80,15 @@ img {
     padding: 0 15px;
   }
 }
+
 @media only screen and (max-width: 480px) {
   .container {
     max-width: 380px;
     padding: 0 10px;
+    text-align: center;
   }
 }
+
 .loader-container {
   position: fixed;
   top: 0;
@@ -119,6 +123,7 @@ img {
     transform: rotate(360deg);
   }
 }
+
 * {
   font-family: "Urbanist", sans-serif;
 }
@@ -126,9 +131,11 @@ img {
 .hero__top {
   margin-top: 30px;
 }
+
 .hero__content {
   margin-top: 34px;
 }
+
 .hero__text {
   width: 100%;
   max-width: 472px;
@@ -139,15 +146,27 @@ img {
   color: #2B2A28;
 }
 
+.hero__btn {
+  color: #CB8734;
+}
+
+@media (max-width: 480px) {
+  .hero__content {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}
+
 .info__container {
   background-image: url(../../images/fon.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-size: 100% auto;
   display: grid;
   place-items: center;
-  height: auto;
 }
+
 .info__frame {
   width: 100%;
   max-width: 570px;
@@ -157,6 +176,7 @@ img {
   opacity: 0.9;
   border-radius: 8px;
 }
+
 .info__contents {
   width: 100%;
   height: auto;
@@ -165,17 +185,21 @@ img {
   align-items: center;
   margin-top: 100px;
 }
+
 .info__content {
   width: 270px;
   height: 139px;
 }
+
 .info__title {
   font-size: 60px;
   color: #CB8734;
 }
+
 .info__span {
   font-size: 36px;
 }
+
 .info__btn {
   background-color: #CB8734;
   border-radius: 4px;
@@ -185,20 +209,75 @@ img {
   height: 66px;
   box-shadow: 0px 4px 4px 0px rgba(203, 135, 52, 0.2);
 }
+
 .info__btn:hover {
   transform: scale(1.1);
 }
+
 .info__btn:active {
   transform: scale(0.9);
+}
+
+.info__img {
+  width: 420px;
+}
+
+.info__tirnoq {
+  width: 55px;
 }
 
 hr {
   color: #CB8734 !important;
 }
 
-.adv {
-  margin-top: 292px;
+@media only screen and (max-width: 480px) {
+  .info__container {
+    background-image: none;
+    margin-top: 30px;
+  }
+
+  .info__img {
+    height: 247px;
+    background-image: url(../../images/fon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 100% auto;
+  }
+
+  .info__tirnoq {
+    display: none;
+  }
+
+  .info__frame {
+    width: 100%;
+    max-width: 100%;
+    padding: 22px;
+    box-shadow: 0px 0px 30px 0px rgba(43, 42, 40, 0.0784313725);
+  }
+
+  .info__subtitle {
+    font-size: 18px;
+  }
+
+  .info__text {
+    font-size: 14px;
+  }
+
+  .info__contents {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .info__btns {
+    flex-direction: column;
+  }
 }
+
+.adv {
+  margin-top: 192px;
+}
+
 .adv__container {
   width: 100%;
   height: 400px;
@@ -206,14 +285,35 @@ hr {
   box-shadow: 0px 0px 30px 0px rgba(43, 42, 40, 0.0784313725);
   border-radius: 10px;
 }
+
 .adv__text {
   width: 250px;
   padding-top: 21px;
 }
 
+@media only screen and (max-width: 480px) {
+  .adv__container {
+    height: auto;
+  }
+
+  .adv__title {
+    font-size: 20px;
+  }
+
+  .adv__contents {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .adv__text {
+    line-height: 30px;
+  }
+}
+
 .order {
   margin-top: 60px;
 }
+
 .order__container {
   display: flex;
   justify-content: space-between;
@@ -223,15 +323,18 @@ hr {
   height: 330px;
   padding: 0 0 0 60px !important;
 }
+
 .order__title {
   width: 379px;
 }
+
 .order__inp {
   width: 390px;
   height: 58px;
   padding: 20px 20px;
   border: 1px solid #E7D8C7;
 }
+
 .order__btn {
   width: 200px;
   height: 58px;
@@ -241,23 +344,47 @@ hr {
   box-shadow: 0px 4px 4px 0px rgba(203, 135, 52, 0.2);
   transition: all 0.3s ease-in-out;
 }
+
 .order__btn:hover {
   transform: scale(1.1);
 }
+
 .order__btn:active {
   transform: scale(0.9);
 }
+
 .order__link {
   text-decoration: none;
   color: #CB8734;
   font-weight: 600;
 }
 
-.art {
-  width: 100%;
-  max-width: 370px;
+@media only screen and (max-width: 480px) {
+  .order__container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px !important;
+  }
+
+  .order__title {
+    font-size: 20px;
+  }
+
+  .order__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .order__inp,
+  .order__btn {
+    margin-bottom: 10px;
+    width: 260px;
+  }
 }
-.art__img {
-  background-image: url(../../images/artsbg.png);
-  background-repeat: no-repeat;
-}/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=main.css.map */
