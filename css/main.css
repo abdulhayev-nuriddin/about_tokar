@@ -5,6 +5,34 @@
   --white-color: #FAFAFA;
 }
 
+/* 
+*:not(html):not(body):not(meta):not(title):not(head):not(style):not(script):not(main) {
+  opacity: 0;
+  transition: 0.7s ease-out;
+  display: inline-block;
+}
+
+.from-right {
+  transform: translateX(50px);
+}
+
+.from-left {
+  transform: translateX(-50px);
+}
+
+.from-top {
+  transform: translateY(-50px);
+}
+
+.from-bottom {
+  transform: translateY(50px);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
+} */
+
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +113,6 @@ img {
   .container {
     max-width: 380px;
     padding: 0 10px;
-    text-align: center;
   }
 }
 
@@ -126,6 +153,138 @@ img {
 
 * {
   font-family: "Urbanist", sans-serif;
+}
+
+.header {
+  padding: 39px 0 0 0;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.header__socials {
+  display: flex;
+  gap: 8px;
+}
+
+.header__btn {
+  cursor: pointer;
+  padding: 15px 25px;
+  background: linear-gradient(180deg, #F39C32, #CB8734);
+  box-shadow: 0px 4px 4px 0px rgba(203, 135, 52, 0.2);
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__btn__text {
+  color: #fff;
+}
+
+.header__lang {
+  box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.0784313725);
+  background: inherit;
+  border-radius: 4px;
+  height: 23px;
+}
+
+.header__tel {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--black-color);
+}
+
+.header__menu {
+  display: none;
+}
+
+.header__phone {
+  display: none;
+  border: 1px solid #CB8734;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .header__container {
+    align-items: center !important;
+  }
+
+  .header__lang,
+  .header__grid,
+  .header__socials,
+  .header__info,
+  .header .bottom {
+    display: none !important;
+  }
+
+  .header__phone,
+  .header__menu {
+    display: flex;
+  }
+}
+
+.bottom__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom__left {
+  width: 620px;
+  height: 72px;
+  background-color: #3D1E19;
+  box-shadow: 0px 0px 20px 0px rgba(43, 42, 40, 0.2);
+  border-radius: 8px;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom__link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.bottom__right {
+  width: 620px;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom__links {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+pre {
+  white-space: pre-line;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .hero__top {
